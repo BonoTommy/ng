@@ -1,0 +1,36 @@
+.details__container {
+    max-width: 80rem;
+    display: grid;
+    margin: 1rem 0;
+    align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+    .details__container {
+        grid-template-columns: 2fr 3fr;
+    }
+}
+
+.details__container>* {
+    padding: 1rem;
+}
+
+.details__image {
+    display: flex;
+    justify-content: center;
+    background-color: rgba($color: #191818, $alpha: 0.1);
+}
+
+.details__image>img {
+    height: 400px;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.actions__container {
+    display: flex;
+    justify-content: center;
+}

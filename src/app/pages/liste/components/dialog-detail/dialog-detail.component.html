@@ -1,0 +1,20 @@
+
+<h1 mat-dialog-title>Détais de la bière: {{data.biere_nom}}</h1>
+<div mat-dialog-content class="details__container">
+    <picture *ngIf="data.biere_image" class="details__image">
+        <img src="assets/img/{{data.biere_image}}" alt="">
+    </picture>
+    <div class="details__content">
+        <p><strong>Brasserie:</strong> {{data.biere_brasserie}}</p>
+        <p><strong>Description:</strong> {{data.biere_description}}</p>
+        <p *ngIf="data.biere_moyenne"><strong>Moyenne des notes:</strong> {{data.biere_moyenne}}/ 5</p>
+        <p *ngIf="data.biere_nombre"><strong>Nombre de notes:</strong> {{data.biere_nombre}}</p>
+        <p *ngIf="data.date_ajout"><strong>Date d'ajout:</strong> {{data.date_ajout}}</p>
+        <p *ngIf="data.date_modif"><strong>Date de modification:</strong> {{data.date_modif}}</p>
+    </div>
+</div>
+<div mat-dialog-actions class="actions__container">
+    <button mat-mini-fab color="warn" (click)="onClose()">
+        <mat-icon>close</mat-icon>
+    </button>
+</div>

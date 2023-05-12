@@ -21,8 +21,6 @@ export class AuthServService {
     this.sTitrePage= new BehaviorSubject<string>("");
     this.sTitrePage$ = this.sTitrePage.asObservable();
 
-    
-
    }
 
   verifConnection():boolean {

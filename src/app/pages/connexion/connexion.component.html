@@ -1,0 +1,22 @@
+<div class="container">
+    <mat-card class="connexion__card">
+        <mat-card-header>
+            <mat-card-title>Se Connecter</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="connexion__form" (ngSubmit)="seConnecter()">
+                <mat-form-field appearance="fill">
+                    <mat-label>Nom d'usager</mat-label>
+                    <input matInput required value="biero">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Mot de passe</mat-label>
+                    <input matInput type="password" value="biero" required>
+                </mat-form-field>
+
+                <button [(ngModel)]="estConnecte" mat-raised-button color="primary" type="submit">Se connecter</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

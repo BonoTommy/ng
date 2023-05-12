@@ -1,0 +1,23 @@
+:root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+} 
+
+.container{
+    padding: 30px;
+}
+
+.connexion__card {
+    margin: 60px auto;
+    width: fit-content;
+    padding: 30px;
+}
+
+.connexion__form {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    
+}

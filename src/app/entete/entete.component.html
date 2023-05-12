@@ -1,20 +1,17 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-        <span><a mat-icon-button color="warn" routerLink="/" routerLinkActive="actif" [routerLinkActiveOptions]="{exact:
-        true}" ><mat-icon>coronavirus</mat-icon></a>Logo et nom - {{titre}}</span>
+        <a color="warn" routerLink="/bieres" routerLinkActive="actif" [routerLinkActiveOptions]="{exact:
+        true}"><img class="logo" src="assets/img/logo-white.png" alt="">
+        </a>
         <span class="filler"></span>
-        <aside>
-            <p>Connecté : <mat-checkbox (change)="seConnecter()" [(ngModel)]="estConnecte"></mat-checkbox></p>
+        <aside class="connexion__aside" *ngIf="estConnecte">
+            <button mat-raised-button (click)="seDeconnecter()">
+                <span>Se Déconnecter</span>
+                <mat-icon class="logout__icon" >logout</mat-icon>
+            </button>
         </aside>
     </mat-toolbar-row>
-    <mat-toolbar-row>
-        <span class="filler"></span>
-        <nav>
-            <a mat-button routerLink="/produit" routerLinkActive="actif">Produits</a>
-            <button mat-raised-button routerLink="/produit" routerLinkActive="actif">Produits</button>
-        </nav>
-       
-    </mat-toolbar-row>
+    <mat-toolbar-row>{{titre}}</mat-toolbar-row>
         
         
 </mat-toolbar>

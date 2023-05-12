@@ -4,9 +4,32 @@
     position: fixed;
     margin-top: -128px;
     width: 100%;
-    z-index: 999;
+    z-index: 10;
 }
 mat-toolbar
 {
     position: fixed;
+}
+
+.connexion__aside {
+    display: flex;
+    align-items: center;
+}
+
+.connexion__aside>span {
+    font-size: 16px;
+}
+
+.connexion__aside {
+    display: flex;
+    align-items: center;
+}
+
+.logout__icon {
+    cursor: pointer;
+}
+
+.logo {
+    max-height: 40px;
+    padding: 20px;
 }

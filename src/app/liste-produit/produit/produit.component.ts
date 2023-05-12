@@ -43,9 +43,9 @@ export class ProduitComponent {
     this.peutEditerChange.emit(this.peutEditer);
     //console.log(evt?.target.value)
   }
-  ajouterProduit(){
-    this.eventAjout.emit({nom: "toto", brasserie : "Le magicien", description : "Description"});
-  }
+  // ajouterProduit(){
+  //   this.eventAjout.emit({nom: "toto", brasserie : "Le magicien", description : "Description"});
+  // }
 
   soumettre(){
     //this.formModif.controls['nom'].setValue("Allo le monde");

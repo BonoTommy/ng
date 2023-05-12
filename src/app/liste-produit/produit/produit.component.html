@@ -1,5 +1,5 @@
 <p>Rendre editable <input type="checkbox" (change)="changeEditable($event)" [(ngModel)]="peutEditer">
-<button (click)="ajouterProduit()">Ajouter un produit</button>
+<!-- <button (click)="ajouterProduit()">Ajouter un produit</button> -->
 <a routerLink="/produit/{{unProduit.id_biere}}">Voir le détail</a>
 <ng-container *ngIf="peutEditer; else nonEditable">
 <fieldset>

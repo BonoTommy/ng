@@ -3,10 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AccueilComponent } from './accueil/accueil.component';
+import { ConnexionComponent } from './pages/connexion/connexion.component';
 import { EnteteComponent } from './entete/entete.component';
 import { ListeProduitComponent } from './liste-produit/liste-produit/liste-produit.component';
-import { DetailProduitComponent } from './detail-produit/detail-produit.component';
 import { NonTrouveComponent } from './non-trouve/non-trouve.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProduitComponent } from './liste-produit/produit/produit.component';
@@ -21,16 +20,27 @@ import {MatInputModule} from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ListeComponent } from './pages/liste/liste.component';
+import { MatSortModule } from '@angular/material/sort';
+import { DialogueSupprimerBiereComponent } from './pages/liste/components/dialogue-supprimer-biere/dialogue-supprimer-biere.component';
+import { BiereComponent } from './pages/biere/biere.component';
+import { DialogDetailComponent } from './pages/liste/components/dialog-detail/dialog-detail.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AccueilComponent,
     EnteteComponent,
     ListeProduitComponent,
-    DetailProduitComponent,
     NonTrouveComponent,
-    ProduitComponent
+    ProduitComponent,
+    ConnexionComponent,
+    ListeComponent,
+    DialogueSupprimerBiereComponent,
+    BiereComponent,
+    DialogDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +56,10 @@ import {MatTableModule} from '@angular/material/table';
     MatInputModule,
     MatToolbarModule,
     MatSnackBarModule,
-    MatTableModule
+    MatTableModule,
+    MatCardModule,
+    MatSortModule,
+    MatDialogModule,
   ],
   providers: [{provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}}],
   bootstrap: [AppComponent]

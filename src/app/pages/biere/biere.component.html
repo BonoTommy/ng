@@ -1,0 +1,52 @@
+<ng-container class="biere__container">
+    <ng-container  *ngIf="biere">
+        <button class="btn-supprimer" mat-raised-button color="warn" (click)="onSupprimer()">Supprimer cette bière</button>
+    </ng-container>
+    <fieldset>
+        <legend>Formulaire de modification d'une bière</legend>
+        <form action="" [formGroup]="formModification" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+                <mat-label for="nom">Nom</mat-label>
+                <input matInput formControlName="nom" id="nom" required>
+                <mat-error *ngIf="formModification?.get('nom')?.hasError('required')">
+                    Le champ Nom est obligatoire
+                </mat-error>
+                <mat-error *ngIf="formModification?.get('nom')?.hasError('minlength')">
+                    Le champ Nom doit avoir 2 caractères minimum
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="brasserie">Brasserie</mat-label>
+                <input matInput formControlName="brasserie" id="brasserie" required>
+                 <mat-error *ngIf="formModification?.get('brasserie')?.hasError('required')">
+                    Le champ Brasserie est obligatoire
+                </mat-error>
+                <mat-error *ngIf="formModification?.get('brasserie')?.hasError('minlength')">
+                    Le champ Brasserie doit avoir 2 caractères minimum
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="description">Description</mat-label>
+                <textarea matInput formControlName="description" id="description" rows="5" required></textarea>
+                 <mat-error *ngIf="formModification?.get('description')?.hasError('required')">
+                    Le champ Description est obligatoire
+                </mat-error>
+                <mat-error *ngIf="formModification?.get('description')?.hasError('minlength')">
+                    Le champ Description doit avoir 2 caractères minimum
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="image">Image (URL)</mat-label>
+                <input matInput formControlName="image" id="image">
+                <mat-error *ngIf="formModification?.get('image')?.hasError('minlength')">
+                    Le champ Image doit avoir 2 caractères minimum
+                </mat-error>
+            </mat-form-field>
+            <div class="btn__container">
+                <button mat-raised-button type="submit" [disabled]="!formModification.dirty || !formModification.valid">{{boutonAction}}</button>
+                <button mat-raised-button color="warn" (click)="onAnnuler()">Annuler</button>
+            </div>
+            
+        </form>
+    </fieldset>
+</ng-container>
